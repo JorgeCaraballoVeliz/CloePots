@@ -1,0 +1,43 @@
+/* css base del sitio web*/
+#navbar {
+    background-color: rgb(53, 49, 49);
+ }
+ body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .wrapper {
+            flex: 1;
+        }
+        .footer {
+            background-color: rgb(53, 49, 49);
+            color: white;
+        }
+
+ #logo {
+	padding-left: 10px;
+ }
+
+ h3 {
+    color: rgb(255, 255, 255);
+ }
+ h5 {
+    color: rgb(184, 184, 184);
+ }
+
+ /* sesion */
+ 
+ .rowx {
+
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+
+  }
+
+  #formu1 {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+

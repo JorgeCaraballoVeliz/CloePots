@@ -1,0 +1,294 @@
+555555552555444
+Dracena Folio Clorus
+12
+2023
+234
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+
+$conexion = mysqli_connect("localhost","root","","cloe_pots");
+		
+mysqli_select_db($conexion,"cloe_pots") or die ("No se puede seleccionar la BD");
+	
+$resultado = mysqli_query($conexion, "select * from productos");
+if (mysqli_connect_errno()) {
+    printf("<p>Conexión fallida: %s</p>", mysqli_connect_error());
+    exit();
+}
+
+$numr = mysqli_num_rows($resultado);
+
+
+$arrayN = [];
+if($numr > 0){
+    for ($i = 0; $i < $numr; $i++){
+       					
+        $fila = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
+         // print_r($fila);
+         
+         foreach ($fila as $key => $value) {
+             $arrayN[$key][] = $value;
+         }
+    }
+}
+
+//    echo "<br><br>";
+//    print_r($arrayN);
+
+$json = json_encode($arrayN);
+ echo $json;
+
+
+?>
+
+
+
+
+
+
+
+
+
+var produs = "<div class='card'>" +
+  "<div class='card-body'>" +
+  "<div style='display: flex; align-items: center;'>" +
+  "<img src='images/" + fprod + "' class='card-img-top' alt='imagen para el producto' style='max-width: 25%; max-height: 25%;'>" +
+  "<div style='margin-left: 10px; flex-grow: 1;'>" +
+  "<h5 class='card-title' style='text-align: right;'>" + cats['nombre'][i] + "</h5>" +
+  "<p class='card-text descrip' style='text-align: right;'>    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt earum aut a fuga et saepe. Dolorem ex voluptas recusandae nemo vero. Amet totam numquam, pariatur quibusdam a eius quis. </p><br>" +
+  "<p class='card-text' style='text-align: right;'>Actualmente " + cats['cantidad'][i] + " en Stock</p>" +
+  "<div class='dropdown' style='text-align: right;'>" +
+  "<button class='btn btn-outline-secondary dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Seleccione cantidad a comprar</button>" +
+  "<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>" +
+  "<a class='dropdown-item' onclick='return cantidadelegida(1);'>1</a>" +
+  "<a class='dropdown-item' onclick='return cantidadelegida(2);'>2</a>" +
+  "<a class='dropdown-item' onclick='return cantidadelegida(3);'>3</a>" +
+  "</div>" +
+  "</div>" +
+  "</div>" +
+  "</div>" +
+  "<div class='presio' style='text-align: right;'>" +
+  "<p class='card-text'>" + cats['precio_unitario'][i] + "€</p>" +
+  "</div>" +
+  "<div style='clear: both;'></div>" +
+  "<button class='btn btn-success' onclick='return anadir(\"" + cats['nombre'][i] + "\", " + cats['id'][i] + "," + cats['precio_unitario'][i] + ");'>Añadir al carrito</button>" +
+  "</div>" +
+  "</div><br>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var produs = "<div class='card'>" +
+                "<div class='card-body'>" +
+                "<img src='images/" + fprod + "' class='card-img-top' alt='imagen para el producto' style='max-width: 25%; max-height: 25%; float: left; margin-right: 10px;'>" +
+                "<div class='dropdown' style='text-align: right; margin-right: 10px;'>" +
+                "<h5 class='card-title'>" + cats['nombre'][i] + "</h5>" +
+                "<p class='card-text descrip' style='text-align: right;'>DESCRIPCIÓN UWUWUWUWUWU</p>" +
+                "<p class='card-text' style='text-align: right;'>Actualmente " + cats['cantidad'][i] + " en Stock</p>" +
+                "<button class='btn btn-outline-secondary dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Seleccione cantidad a comprar</button>" +
+                "<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>" +
+                "<a class='dropdown-item' onclick='return cantidadelegida(1);'>1</a>" +
+                "<a class='dropdown-item' onclick='return cantidadelegida(2);'>2</a>" +
+                "<a class='dropdown-item' onclick='return cantidadelegida(3);'>3</a>" +
+                "</div>" +
+                "</div>" +
+                "<div class='presio'>" +
+                "<p class='card-text' style='text-align: right;'>" + cats['precio_unitario'][i] + "€</p>" +
+                "</div>" +
+                "<button class='btn btn-success' onclick='return anadir(\"" + cats['nombre'][i] + "\", " + cats['id'][i] + "," + cats['precio_unitario'][i] + ");'>Añadir al carrito</button>" +
+                "</div>" +
+                "</div><br>";
+var produs = "<div class='card'>" +
+  "<div class='card-body'>" +
+  "<div style='display: flex; align-items: center;'>" +
+  "<img src='images/" + fprod + "' class='card-img-top' alt='imagen para el producto' style='max-width: 25%; max-height: 25%;'>" +
+  "<div style='margin-left: 10px;'>" +
+  "<h5 class='card-title'>" + cats['nombre'][i] + "</h5>" +
+  "<p class='card-text descrip'>DESCRIPCIÓN UWUWUWUWUWU</p>" +
+  "<p class='card-text'>Actualmente " + cats['cantidad'][i] + " en Stock</p>" +
+  "<div class='dropdown'>" +
+  "<button class='btn btn-outline-secondary dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Seleccione cantidad a comprar</button>" +
+  "<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>" +
+  "<a class='dropdown-item' onclick='return cantidadelegida(1);'>1</a>" +
+  "<a class='dropdown-item' onclick='return cantidadelegida(2);'>2</a>" +
+  "<a class='dropdown-item' onclick='return cantidadelegida(3);'>3</a>" +
+  "</div>" +
+  "</div>" +
+  "</div>" +
+  "</div>" +
+  "<div class='presio' style='text-align: right;'>" +
+  "<p class='card-text'>" + cats['precio_unitario'][i] + "€</p>" +
+  "</div>" +
+  "<div style='clear: both;'></div>" +
+  "<button class='btn btn-success' onclick='return anadir(\"" + cats['nombre'][i] + "\", " + cats['id'][i] + "," + cats['precio_unitario'][i] + ");'>Añadir al carrito</button>" +
+  "</div>" +
+  "</div><br>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function load() {
+    /////sesion
+    console.log("Page loaded!");
+
+  var storedUsername = sessionStorage.getItem('username');
+  if (storedUsername) {
+    globalThis.usu = storedUsername;
+    var nombreUsuario = "<li class='nav-item dropdown'><a class='nav-link dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'>" + globalThis.usu + "</a><div class='dropdown-menu'><a class='dropdown-item' href='#' onclick='return sesiont();'>Cerrar sesión</a></div></li>";
+
+    var nombreUsuarioElement = document.getElementById("nombreUsuario");
+    nombreUsuarioElement.innerHTML = nombreUsuario;
+  } else {
+    console.log("User session data not found");
+  }
+
+
+    /////productos
+    console.log("señal de sesion");
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function() {
+        console.log('toiiii');
+        if (this.readyState == 4 && this.status == 200) {
+            var cats = JSON.parse(this.response);
+            console.log(cats);
+            
+            //console.log(cats['id']);
+            //
+            console.log(cats['nombre']);
+            for(var i=0; i< cats['id'].length; i++) {
+                var fprod = "";
+                if(cats['estado'][i] == 'planta'){
+                    fprod = "planta.jpg";
+                } else if (cats['estado'][i] == 'maceta'){
+                    fprod = "maceta.jpg";
+                } else if (cats['estado'][i] == 'herramienta'){
+                    fprod = "herramienta.jpg";
+                } else {
+                    fprod = "otros.png";
+                }
+                var produs = "<div class='card'>" +
+  "<div class='card-body'>" +
+  "<div style='display: flex; align-items: center;'>" +
+  "<img src='images/" + fprod + "' class='card-img-top' alt='imagen para el producto' style='max-width: 25%; max-height: 25%;'>" +
+  "<div style='margin-left: 10px; flex-grow: 1;'>" +
+  "<h5 class='card-title' style='text-align: right;'>" + cats['nombre'][i] + "</h5>" +
+  "<p class='card-text descrip' style='text-align: right;'>    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt earum aut a fuga et saepe. Dolorem ex voluptas recusandae nemo vero. Amet totam numquam, pariatur quibusdam a eius quis. </p><br>" +
+  "<p class='card-text' style='text-align: right;'>Actualmente " + cats['cantidad'][i] + " en Stock</p>" +
+  "<div class='dropdown' style='text-align: right;'>" +
+  "<button class='btn btn-outline-secondary dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Seleccione cantidad a comprar</button>" +
+  "<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>" +
+  "<a class='dropdown-item' onclick='return cantidadelegida(1);'>1</a>" +
+  "<a class='dropdown-item' onclick='return cantidadelegida(2);'>2</a>" +
+  "<a class='dropdown-item' onclick='return cantidadelegida(3);'>3</a>" +
+  "</div>" +
+  "</div>" +
+  "</div>" +
+  "</div>" +
+  "<div class='presio' style='text-align: right;'>" +
+  "<p class='card-text'>" + cats['precio_unitario'][i] + "€</p>" +
+  "</div>" +
+  "<div style='clear: both;'></div>" +
+  "<button class='btn btn-success' onclick='return anadir(\"" + cats['nombre'][i] + "\", " + cats['id'][i] + "," + cats['precio_unitario'][i] + ");'>Añadir al carrito</button>" +
+  "</div>" +
+  "</div><br>";
+
+
+                var produsElement = document.getElementById("produs");
+                produsElement.innerHTML += produs;
+                
+             } 
+    }   
+}
+
+xhttp.open("GET", "php/productos.php", true);
+xhttp.send();
+return false;
+}
+window.onload = load;

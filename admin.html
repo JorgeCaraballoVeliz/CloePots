@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CloePots</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- Iconos -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<!-- css -->
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+	<!-- Navbar con bootstrap -->
+	<nav  id="navbar" class="navbar navbar-expand-md  navbar-dark fixed-top">
+		<!-- Logo -->
+		<a class="navbar-brand" href="index.html">
+			<img src="images/logo.png" alt="Logo" style="height: 70px;">
+		</a>
+		<!-- Botón de Toggler/collapsibe  -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Enlaces de mi navbar -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.html">Peticiones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="adminPe.html">Pedidos</a>
+                </li>
+				<span id="nombreUsuario">
+					<li class="nav-item">
+						<a class="nav-link" href="sesion.html">Iniciar sesión</a>
+					</li>
+				</span>
+			</ul>
+		</div>
+	</nav>
+    <div class="wrapper">
+		<!-- Contenido de la página -->
+		<br><br><br><br><br>
+        <center><h4 class="textos">Peticiones</h4></center>
+    <div class="container p-4 cuadroregistro ">
+        <div class="row rowx">
+          <div class="">
+            <form>
+                <table class="table" style="width: 100%">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nº de pedido</th>
+                            <th>Petición</th>
+                            <th>Estado</th>
+                            <th>Respuesta</th>
+                        </tr>
+                    </thead>
+                    <tbody id="produs"></tbody>
+                    
+                </table>                
+            </form>
+				
+          </div>
+         
+        </div>
+      </div>
+    
+        <br>
+	</div>
+	 <!-- Footer -->
+     <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Vista cliente</h3>
+                    <p>Pulsa sobre el logo de CloePots para visualizar la tienda modo cliente</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Herramientas del cliente</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="seguimiento.html">Seguimiento</a></li>
+                        <li><a href="politica.html">Política de privacidad</a></li>
+                        <li><a href="terminos.html">Términos y condiciones</a></li>
+						<li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+	<!-- Futuros scripts y jquery -->
+    <script src="js/admin.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</body>
+</html>

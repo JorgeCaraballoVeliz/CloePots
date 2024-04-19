@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CloePots</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- Iconos -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<!-- css -->
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+	<!-- Navbar con bootstrap -->
+	<nav  id="navbar" class="navbar navbar-expand-md  navbar-dark fixed-top">
+		<!-- Logo -->
+		<a class="navbar-brand" href="index.html">
+			<img src="images/logo.png" alt="Logo" style="height: 70px;">
+		</a>
+		<a class="navbar-brand" href="#">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<form class="form-inline my-2 my-lg-0 ml-auto">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Buscar producto" aria-label="Search" id="textobuscado">
+						<div class="input-group-append">
+							<button class="btn btn-outline-success" type="button" onclick='return buscado();'><i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</a>
+		<!-- Botón de Toggler/collapsibe  -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Enlaces de mi navbar -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="plantas.html">Plantas</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" id="navbardrop" href='#' data-toggle="dropdown">
+						Otros
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="macetas.html">Macetas</a>
+						<a class="dropdown-item" href="herramientas.html">Herramientas</a>
+						<a class="dropdown-item" href="otros.html">Otras necesidades</a>
+					</div>
+				</li>
+				<span id="nombreUsuario">
+					<li class="nav-item">
+						<a class="nav-link" href="sesion.html">Iniciar sesión</a>
+					</li>
+				</span>
+				
+				<li class="nav-item" id="logo">
+					<div class="input-group-append">
+						<button class="btn btn-success" type="button" id="cartButton"><i class="fas fa-cart-arrow-down"></i></button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+    <div class="wrapper">
+		<!-- Contenido de la página -->
+		<br><br><br><br><br>
+		<div> 
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+						  <div class="card-body">
+						  <h5 class="card-title">Términos y Condiciones</h5>
+						  <p class="card-text">
+							Bienvenido/a a CloePots. Estos términos y condiciones rigen el uso de nuestra página web y la compra de productos a través de ella. Al acceder y utilizar nuestra página, usted acepta cumplir con estos términos y condiciones. Lea detenidamente la siguiente información:
+							<br><br>
+							Uso del Sitio<br>
+							a. Usted acepta utilizar nuestro sitio web únicamente con fines legítimos y de acuerdo con estos términos y condiciones.
+							<br>
+							b. No está permitido utilizar nuestro sitio para actividades que sean ilegales o que violen los derechos de terceros.
+							<br>
+							c. No podrá copiar, reproducir, distribuir, modificar, transmitir, mostrar, publicar, vender, licenciar o explotar de cualquier otra manera cualquier contenido o información disponible en nuestro sitio sin nuestro consentimiento previo por escrito.
+							<br><br>
+							Registro de Cuenta<br>
+							a. Puede ser necesario registrarse en nuestro sitio para realizar compras.
+							<br>
+							b. Usted es responsable de proporcionar información precisa y actualizada durante el proceso de registro.
+							<br>
+							c. Usted es responsable de mantener la confidencialidad de su cuenta y contraseña, y acepta notificarnos inmediatamente cualquier uso no autorizado de su cuenta.
+							<br><br>
+							Productos y Pedidos<br>
+							a. Los productos que ofrecemos en nuestro sitio están sujetos a disponibilidad.
+							<br>
+							b. Nos reservamos el derecho de rechazar o cancelar cualquier pedido en cualquier momento, por cualquier motivo.
+							<br>
+							c. Nos esforzamos por mostrar imágenes y descripciones precisas de nuestros productos, pero no garantizamos que la visualización en su pantalla sea exacta.
+							<br>
+							d. Los precios de los productos están sujetos a cambios sin previo aviso.
+							<br><br>
+							Envío y Entrega<br>
+							a. El envío de los productos se realizará a la dirección de envío proporcionada durante el proceso de compra.
+							<br>
+							b. Nos esforzamos por cumplir con los plazos de entrega indicados, pero no nos hacemos responsables de retrasos causados por circunstancias fuera de nuestro control.
+							<br><br>
+							Política de Devoluciones<br>
+							a. Consulte nuestra política de devoluciones para obtener información detallada sobre cómo proceder en caso de devolución de productos.
+							<br><br>
+							Propiedad Intelectual<br>
+							a. Todo el contenido y materiales disponibles en nuestro sitio web están protegidos por derechos de autor, marcas comerciales y otras leyes de propiedad intelectual.
+							<br>
+							b. No se le otorga ningún derecho sobre los materiales y contenido de nuestro sitio, excepto en la medida expresamente establecida en estos términos y condiciones.
+							<br><br>
+							Limitación de Responsabilidad<br>
+							a. No nos hacemos responsables de cualquier daño directo, indirecto, incidental, especial o consecuente que surja del uso de nuestro sitio web o la compra de productos a través de él.
+							<br><br>
+							Modificaciones<br>
+							Nos reservamos el derecho de modificar, actualizar o reemplazar estos términos y condiciones en cualquier momento sin previo aviso. Le recomendamos revisar periódicamente esta página para mantenerse informado sobre los cambios.
+							<br><br>
+							Ley Aplicable<br>
+							Estos términos y condiciones se rigen por las leyes de España y cualquier disputa que surja en relación con ellos se someterá a la jurisdicción exclusiva de los tribunales competentes del España.
+							<br><br>
+							Si tiene alguna pregunta o inquietud sobre estos términos y condiciones, por favor contáctenos a través de los medios proporcionados en nuestra página web. Al utilizar nuestro sitio y realizar una compra, usted acepta estos términos y condiciones en su totalidad.
+						  </div>
+						</div>
+						</div>
+				</div>
+			  </div>
+		</div>
+		<br>
+	</div>
+	 <!-- Footer -->
+     <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Sobre nosotros</h3>
+                    <p>Nuestra tienda online de plantas de interior es un lugar donde puedes encontrar una amplia selección de plantas de alta calidad para embellecer tu hogar u oficina. Nos dedicamos a proporcionar plantas saludables y hermosas para mejorar tu bienestar y la calidad del aire interior de tus espacios. </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Pedidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="seguimiento.html">Seguimiento</a></li>
+                        <li><a href="politica.html">Política de privacidad</a></li>
+                        <li><a href="terminos.html">Términos y condiciones</a></li>
+						<li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Atencion al cliente</h3>
+					<a href="contacto.html">Contacto</a>
+                    <p>Calle de Fernández de los Ríos, 45<br>Madrid 28897<br>Tfno.: 631215516<br>Email: info@cloepots.es</p>
+                </div>
+				
+            </div>
+        </div>
+    </footer>
+
+
+
+	<!-- Futuros scripts y jquery -->
+    <script src="js/sesion-r.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+	<script>
+		document.getElementById("cartButton").addEventListener("click", function() {
+		  window.location.href = "compra.html";
+		});
+	  </script>
+</body>
+</html>

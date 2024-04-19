@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CloePots</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- Iconos -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<!-- css -->
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+	<!-- Navbar con bootstrap -->
+	<nav  id="navbar" class="navbar navbar-expand-md  navbar-dark fixed-top">
+		<!-- Logo -->
+		<a class="navbar-brand" href="index.html">
+			<img src="images/logo.png" alt="Logo" style="height: 70px;">
+		</a>
+		<a class="navbar-brand" href="#">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<form class="form-inline my-2 my-lg-0 ml-auto">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Buscar producto" aria-label="Search" id="textobuscado">
+						<div class="input-group-append">
+							<button class="btn btn-outline-success" type="button" onclick='return buscado();'><i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</a>
+		<!-- Botón de Toggler/collapsibe  -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Enlaces de mi navbar -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="plantas.html">Plantas</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" id="navbardrop" href='#' data-toggle="dropdown">
+						Otros
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="macetas.html">Macetas</a>
+						<a class="dropdown-item" href="herramientas.html">Herramientas</a>
+						<a class="dropdown-item" href="otros.html">Otras necesidades</a>
+					</div>
+				</li>
+				<span id="nombreUsuario">
+					<li class="nav-item">
+						<a class="nav-link" href="sesion.html">Iniciar sesión</a>
+					</li>
+				</span>
+				
+				<li class="nav-item" id="logo">
+					<div class="input-group-append">
+						<button class="btn btn-success" type="button" id="cartButton"><i class="fas fa-cart-arrow-down"></i></button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+    <div class="wrapper">
+		<!-- Contenido de la página -->
+		<br><br><br><br><br>
+		<div> 
+			<div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <center><h5 class="card-title">Introduzca los datos necesarios para el pago por favor</h5></center>
+                                <p class="card-text">
+                                    <form id="formu1">
+                                        <div class="form-group p-1 nutar">
+                                            <label for="nutar">Número de tarjeta:</label>
+                                            <input type="text" name="nutar" id="nutar" placeholder="Introduzca aquí el número de su tarjeta" class="form-control">
+                                        </div>
+                                        <div class="form-group p-1 notar">
+                                            <label for="notar">Nombre en la tarjeta:</label>
+                                            <input type="text" name="notar" id="notar" placeholder="Introduzca aquí el nombre del titular de la tarjeta" class="form-control">
+                                        </div>
+                                        <div class="form-group p-1 fech">
+                                            <label for="fech">Fecha de caducidad:</label>
+                                            <div class="input-group">
+                                                <input type="text" name="fechM" id="fechM" class="form-control" placeholder="Mes">
+                                                <input type="text" name="fechA" id="fechA" class="form-control" placeholder="Año">
+                                            </div>
+                                        </div>
+                                        <div class="form-group p-1 cvv">
+                                            <label for="cvv">CVV:</label>
+                                            <input type="text" name="cvv" id="cvv" placeholder="Introduzca aquí el CVV" class="form-control">
+                                        </div>
+                                        <div id="mensaje" class="nusuario mt-2">
+                                            <button type="button" id="pago" class="btn btn-success btn-block text-center" onclick="return pagof();">&emsp; Realizar pago &emsp;</button>
+                                        </div>
+                                        <br>
+                                        <span id="produs"></span>
+                                    </form>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+		</div>
+		<br>
+	</div>
+	 <!-- Footer -->
+     <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Sobre nosotros</h3>
+                    <p>Nuestra tienda online de plantas de interior es un lugar donde puedes encontrar una amplia selección de plantas de alta calidad para embellecer tu hogar u oficina. Nos dedicamos a proporcionar plantas saludables y hermosas para mejorar tu bienestar y la calidad del aire interior de tus espacios. </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Pedidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="seguimiento.html">Seguimiento</a></li>
+                        <li><a href="politica.html">Política de privacidad</a></li>
+                        <li><a href="terminos.html">Términos y condiciones</a></li>
+						<li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Atencion al cliente</h3>
+					<a href="contacto.html">Contacto</a>
+                    <p>Calle de Fernández de los Ríos, 45<br>Madrid 28897<br>Tfno.: 631215516<br>Email: info@cloepots.es</p>
+                </div>
+				
+            </div>
+        </div>
+    </footer>
+
+
+
+	<!-- Futuros scripts y jquery -->
+    <script src="js/pago.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+	<script>
+		document.getElementById("cartButton").addEventListener("click", function() {
+		  window.location.href = "compra.html";
+		});
+	  </script>
+</body>
+</html>
